@@ -6,6 +6,62 @@
     <title>Calculadora de Gorjeta</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <img src="./img/logo.svg" alt="" />
+
+    <form class="calc" action="./ixdex.html">
+      <div class="calc-dados">
+        <div class="total">
+          <label for="total">Bill</label>
+          <input type="number" name="total" id="total" />
+        </div>
+
+        <div class="taxa-gorjeta">
+          <h2>Select Tip %</h2>
+          <ul class="taxas-lista">
+            <li><input type="button" value="5%" /></li>
+            <li><input type="button" value="10%" /></li>
+            <li><input type="button" value="15%" /></li>
+            <li><input type="button" value="25%" /></li>
+            <li><input type="button" value="50%" /></li>
+            <li>
+              <input
+                type="text"
+                name="custom"
+                id="custom"
+                placeholder="Custom"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="input-pessoas">
+          <label for="pessoas">Number of People</label>
+          <input type="number" name="pessoas" id="pessoas" />
+        </div>
+      </div>
+
+      <div class="calc-resultado">
+        <div>
+          <h2>Tip Amount</h2>
+          <span>$0.00</span>
+        </div>
+
+        <div>
+          <h2>Total</h2>
+          <span>$0.00</span>
+        </div>
+
+        <button>Reset</button>
+      </div>
+    </form>
+  </body>
 </html>

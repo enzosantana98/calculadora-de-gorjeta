@@ -1,0 +1,89 @@
+@import url('./utilitario.css');
+
+body {
+  margin: 0;
+  display: grid;
+  gap: 60px;
+  background: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+}
+
+img {
+  margin-top: 120px;
+  justify-self: center;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+label {
+  margin: 0px;
+}
+
+input[type='button'],
+input[placeholder],
+button {
+  border: none;
+}
+
+.calc {
+  max-width: 800px;
+  justify-self: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calc-dados {
+  display: grid;
+  gap: 24px;
+}
+
+.calc-dados label {
+  display: block;
+}
+
+.calc-dados label + input {
+  width: 100%;
+}
+
+.calc-dados .taxas-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
+}
+
+input[type='button'],
+input[placeholder] {
+  width: 100px;
+  text-align: center;
+  border-radius: 6px;
+  font: 700 18px 'Space Mono', monospace;
+}
+
+input[type='button'] {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+}
+
+input[placeholder] {
+  color: hsl(186, 14%, 43%);
+  background: hsl(189, 41%, 97%);
+}
+
+.calc-resultado {
+  border-radius: 20px;
+  background: hsl(183, 100%, 15%);
+}
