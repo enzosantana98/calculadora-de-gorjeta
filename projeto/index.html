@@ -17,23 +17,24 @@
   <body>
     <img src="./img/logo.svg" alt="" />
 
-    <form class="calc" action="./ixdex.html">
+    <form class="calc" action="#">
       <div class="calc-dados">
         <div class="total">
           <label for="total">Bill</label>
-          <input type="number" name="total" id="total" placeholder="0" />
+          <input class="js-conta" type="number" name="total" id="total" placeholder="0" />
         </div>
 
         <div class="taxa-gorjeta">
           <h2>Select Tip %</h2>
           <ul class="taxas-lista">
-            <li><input type="button" name="taxa" value="5%" /></li>
-            <li><input type="button" name="taxa" value="10%" /></li>
-            <li><input type="button" name="taxa" value="15%" /></li>
-            <li><input type="button" name="taxa" value="25%" /></li>
-            <li><input type="button" name="taxa" value="50%" /></li>
+            <li><input class="js-porcentagem" type="button" name="taxa" value="5%" /></li>
+            <li><input class="js-porcentagem" type="button" name="taxa" value="10%" /></li>
+            <li><input class="js-porcentagem" type="button" name="taxa" value="15%" /></li>
+            <li><input class="js-porcentagem" type="button" name="taxa" value="25%" /></li>
+            <li><input class="js-porcentagem" type="button" name="taxa" value="50%" /></li>
             <li>
               <input
+                class="js-custom"
                 type="number"
                 name="custom"
                 id="custom"
@@ -45,23 +46,25 @@
 
         <div class="input-pessoas">
           <label for="pessoas">Number of People</label>
-          <input type="number" name="pessoas" id="pessoas" placeholder="0" />
+          <span class="js-mensagemErro"></span>
+          <input class="js-pessoas" type="number" name="pessoas" id="pessoas" placeholder="0" />
         </div>
       </div>
 
       <div class="calc-resultado">
         <div>
           <h2>Tip Amount</h2>
-          <span>$0.00</span>
+          <span class="js-amont">$0.00</span>
         </div>
 
         <div>
           <h2>Total</h2>
-          <span>$0.00</span>
+          <span class="js-total">$0.00</span>
         </div>
 
-        <button>Reset</button>
+        <button class="js-reset">Reset</button>
       </div>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>
