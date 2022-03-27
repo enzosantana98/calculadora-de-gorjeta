@@ -27,19 +27,22 @@ label {
   margin: 0px;
 }
 
-input[type='button'],
-input[placeholder],
+input,
 button {
   border: none;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .calc {
   max-width: 800px;
   justify-self: center;
   display: grid;
-  gap: 20px;
+  gap: 40px;
   grid-template-columns: 1fr 1fr;
-  padding: 40px;
+  padding: 20px;
   background: hsl(0, 0%, 100%);
   border-radius: 20px;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -47,15 +50,57 @@ button {
 
 .calc-dados {
   display: grid;
-  gap: 24px;
+  gap: 38px;
+  padding: 12px;
 }
 
-.calc-dados label {
+.calc-dados label,
+.calc-dados h2 {
   display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: hsl(186, 14%, 43%);
 }
 
 .calc-dados label + input {
   width: 100%;
+  padding: 6px 12px;
+  font: 700 1rem 'Space Mono', monospace;
+  background: hsl(189, 41%, 97%);
+  border-radius: 6px;
+  text-align: end;
+  color: hsl(186, 14%, 43%);
+}
+
+.calc-dados label {
+  position: relative;
+}
+
+.calc-dados .total label::before {
+  content: '';
+  width: 11px;
+  height: 17px;
+  display: inline-block;
+  background: url('./img/icon-dollar.svg') no-repeat;
+  position: absolute;
+  top: 34px;
+  left: 12px;
+}
+
+.calc-dados .input-pessoas label::before {
+  content: '';
+  width: 11px;
+  height: 17px;
+  display: inline-block;
+  background: url('./img/icon-person.svg') no-repeat;
+  position: absolute;
+  top: 34px;
+  left: 12px;
+}
+
+.calc-dados label + input::placeholder {
+  text-align: end;
+  color: rgb(127, 156, 159);
 }
 
 .calc-dados .taxas-lista {
@@ -65,25 +110,70 @@ button {
   gap: 10px;
 }
 
-input[type='button'],
-input[placeholder] {
+.taxas-lista input[type='button'],
+.taxas-lista input[placeholder] {
   width: 100px;
+  padding: 6px 0px;
   text-align: center;
   border-radius: 6px;
   font: 700 18px 'Space Mono', monospace;
 }
 
-input[type='button'] {
+.taxas-lista input[type='button'] {
   color: hsl(0, 0%, 100%);
   background-color: hsl(183, 100%, 15%);
 }
 
-input[placeholder] {
+.taxas-lista input[placeholder] {
   color: hsl(186, 14%, 43%);
   background: hsl(189, 41%, 97%);
+}
+
+.taxas-lista input[placeholder]::placeholder {
+  color: hsl(186, 14%, 43%);
 }
 
 .calc-resultado {
   border-radius: 20px;
   background: hsl(183, 100%, 15%);
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.calc-resultado div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-resultado div:nth-child(2) {
+  margin-bottom: 72px;
+}
+
+.calc-resultado div h2 {
+  color: hsl(189, 41%, 97%);
+  font-size: 0.8rem;
+}
+
+.calc-resultado div h2::after {
+  content: '/ person';
+  display: block;
+  color: hsl(184, 14%, 56%);
+  font-size: 0.7rem;
+}
+
+.calc-resultado div span {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.calc-resultado button {
+  background: hsla(172, 67%, 45%, 0.267);
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  font: 700 18px 'Space Mono', monospace;
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
 }
